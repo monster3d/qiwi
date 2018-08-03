@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker run -ti --volume $(pwd)/:/app qiwi composer "$1"
