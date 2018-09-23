@@ -26,9 +26,15 @@ class ContractInfo extends Base
 
     /**
      * Create datetime
-     * @var string
+     * @var DateTime
      */
     private $creationDate;
+
+    /**
+     * Service information
+     * @var array
+     */
+    private $features = [];
 
     /**
      * @param bool $blocked
@@ -74,24 +80,35 @@ class ContractInfo extends Base
      */
     public function setCreationDate(string $creationDate) : self
     {
-        $this->creationDate = $creationDate;
+        $this->creationDate = $this->makeDateTime($creationDate);
 
         return $this;
     }
 
     /**
-     * @return null|string`
+     * @return DateTime
      */
-    public function getStringCreationDate() : ?string
+    public function getCreationDate() : ?DateTime
     {
         return $this->creationDate;
     }
 
     /**
-     * @return DateTime
+     * @param array $features
+     * @return ContractInfo
      */
-    public function getObjectCreationDate() : DateTime
+    public function setFeatures(array $features) : self
     {
-        return DateTime::createFromFormat('Y-m-d H:i:s', $this->creationDate);
+        $this->features = $features;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFeatures() : array
+    {
+        return $this->features;
     }
 }

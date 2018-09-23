@@ -3,6 +3,8 @@
 namespace Qiwi\Elements;
 
 
+use DateTime;
+
 class Base
 {
     /**
@@ -18,5 +20,14 @@ class Base
         }
 
         return $result;
+    }
+
+    /**
+     * @param string $stringDatetime
+     * @return DateTime
+     */
+    protected function makeDateTime(string $stringDatetime) : DateTime
+    {
+        return new DateTime($stringDatetime);
     }
 }
