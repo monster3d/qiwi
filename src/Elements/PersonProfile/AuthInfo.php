@@ -3,6 +3,7 @@
 namespace Qiwi\Elements\PersonProfile;
 
 
+use DateTime;
 use Qiwi\Elements\Base;
 
 /**
@@ -12,31 +13,37 @@ use Qiwi\Elements\Base;
 class AuthInfo extends Base
 {
     /**
+     * Email tied to a purse
      * @var string
      */
     private $boundEmail;
 
     /**
+     * Ip address
      * @var string
      */
     private $ip;
 
     /**
-     * @var string
+     * Last login datetime
+     * @var DateTime
      */
     private $lastLoginDate;
 
     /**
+     * @see MobilePinInfo
      * @var MobilePinInfo
      */
     private $mobilePinInfo;
 
     /**
+     * @see PinInfo
      * @var PassInfo
      */
     private $passInfo;
 
     /**
+     * Purse number
      * @var string
      */
     private $personId;
@@ -47,21 +54,25 @@ class AuthInfo extends Base
     private $pinInfo;
 
     /**
-     * @var string
+     * Registration datetime
+     * @var DateTime
      */
     private $registrationDate;
 
     /**
+     * @see ContractInfo
      * @var ContractInfo
      */
     private $contractInfo;
 
     /**
+     * @see IdentificationInfo
      * @var IdentificationInfo
      */
     private $identificationInfo;
 
     /**
+     * @see UserInfo
      * @var UserInfo
      */
     private $userInfo;
@@ -89,7 +100,7 @@ class AuthInfo extends Base
      * @param $ip
      * @return AuthInfo
      */
-    public function setIp($ip) : self
+    public function setIp(string $ip) : self
     {
         $this->ip = $ip;
 
@@ -108,27 +119,19 @@ class AuthInfo extends Base
      * @param $lastLoginDate
      * @return AuthInfo
      */
-    public function setLastLoginDate($lastLoginDate) : self
+    public function setLastLoginDate(string $lastLoginDate) : self
     {
-        $this->lastLoginDate = $lastLoginDate;
+        $this->lastLoginDate = $this->makeDateTime($lastLoginDate);
 
         return $this;
     }
 
     /**
-     * @return null|string
+     * @return DateTime|null
      */
-    public function getStringLastLoginDate() : ?string
+    public function getLastLoginDate() : ?DateTime
     {
         return $this->lastLoginDate;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function &getObjectLastLoginDate() : \DateTime
-    {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->lastLoginDate);
     }
 
     /**
@@ -213,25 +216,17 @@ class AuthInfo extends Base
      */
     public function setRegistrationDate(string $registrationDate) : self
     {
-        $this->registrationDate = $registrationDate;
+        $this->registrationDate = $this->makeDateTime($registrationDate);
 
         return $this;
     }
 
     /**
-     * @return null|string
+     * @return DateTime|null
      */
-    public function getStringRegistrationDate() : ?string
+    public function getRegistrationDate() : ?DateTime
     {
-        return $this->registrationDate;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getObjectRegistrationDate() : \DateTime
-    {
-        return \DateTime::createFromFormat('Y-m-d H-i-s', $this->registrationDate);
+        return  $this->registrationDate;
     }
 
     /**
