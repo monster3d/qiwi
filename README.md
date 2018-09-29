@@ -6,8 +6,8 @@ For developers
 In order to deploy the development environment  
 <b>Need:</b>   
 1. [Install Docker](https://docs.docker.com/install/)
-2. Clone this project  `$ git clone git@github.com:monster3d/qiwi.git` 
-3. Build docket in the project dir `docker build -t qiwi .` 
+2. Clone this project  `git clone git@github.com:monster3d/qiwi.git` 
+3. Build docker in the project dir `docker build -t qiwi .` 
 4. Install dependency `./composer install`
 5. Create feature branch (source from master or last stable tag) `git checkout -b feature-branch origin/master`   
 
