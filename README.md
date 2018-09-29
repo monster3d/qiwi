@@ -3,7 +3,7 @@
 Give access to Qiwi api in the form of methods   
 ## Contribution
 For developers   
-In order to expand the development environment  
+In order to deploy the development environment  
 <b>Need:</b>   
 1. [Install Docker](https://docs.docker.com/install/)
 2. Clone this project  `$ git clone git@github.com:monster3d/qiwi.git` 
