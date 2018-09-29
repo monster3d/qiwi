@@ -6,6 +6,10 @@ use Qiwi\Elements\PersonProfile\UserInfo;
 use Qiwi\Enums\BaseTypeEnum;
 use Qiwi\Mappers\Mapper;
 
+/**
+ * Class UserInfoMapper
+ * @package Qiwi\Mappers\PersonProfileMappers
+ */
 final class UserInfoMapper extends Mapper
 {
     /**
@@ -13,7 +17,7 @@ final class UserInfoMapper extends Mapper
      * @param array $userInfoResponse
      * @return callable
      */
-    final public static function map(UserInfo &$userInfo, array $userInfoResponse) : callable
+    final public static function make(UserInfo &$userInfo, array $userInfoResponse) : callable
     {
         $mapper = function () use(&$userInfo, $userInfoResponse) {
             if (self::isValid($userInfoResponse, 'defaultPayCurrency')) {

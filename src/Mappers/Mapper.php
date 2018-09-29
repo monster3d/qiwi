@@ -18,6 +18,7 @@ class Mapper
     protected static function isValid(array $value, string $name) : bool
     {
         $result = false;
+
         if (isset($value[$name]) && !is_null($value[$name])) {
             $result = true;
         }
