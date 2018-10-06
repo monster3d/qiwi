@@ -18,4 +18,14 @@ abstract class BaseTypeEnum
      * Type is string
      */
     const STRING = 'string';
+
+    /**
+     * Type is boolean
+     */
+    const BOOL = 'bool';
+
+    /**
+     * Type is array
+     */
+    const ARRAY = 'array';
 }
