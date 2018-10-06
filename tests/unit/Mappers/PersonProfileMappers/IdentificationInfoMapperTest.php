@@ -28,7 +28,7 @@ class IdentificationInfoMapperTest extends TestCase
     /**
      * @return IdentificationInfo
      */
-    private function getIdentificationInfo() : IdentificationInfo
+    private function makeIdentificationInfo() : IdentificationInfo
     {
         return new IdentificationInfo();
     }
@@ -36,7 +36,7 @@ class IdentificationInfoMapperTest extends TestCase
     /**
      * @return IdentificationInfo
      */
-    private function getActualIdentificationInfo() : IdentificationInfo
+    private function makeActualIdentificationInfo() : IdentificationInfo
     {
         $identificationInfo = new IdentificationInfo();
         $identificationInfo
@@ -53,9 +53,9 @@ class IdentificationInfoMapperTest extends TestCase
     {
         // Arrange
         $fixtureManager            = $this->makeFixtureManager();
-        $identificationInfo        = $this->getIdentificationInfo();
+        $identificationInfo        = $this->makeIdentificationInfo();
         $identificationInfoFixture = $fixtureManager->getAsArray();
-        $actualIdentificationInfo  = $this->getActualIdentificationInfo();
+        $actualIdentificationInfo  = $this->makeActualIdentificationInfo();
 
         // Act
         IdentificationInfoMapper::make($identificationInfo, $identificationInfoFixture['identificationInfo'][0])();
