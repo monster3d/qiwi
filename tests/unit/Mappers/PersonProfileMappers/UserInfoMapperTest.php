@@ -22,6 +22,7 @@ class UserInfoMapperTest extends TestCase
     {
         return FixtureManager::make('PersonProfile', 'userInfo');
     }
+
     /**
      * @return UserInfo
      */

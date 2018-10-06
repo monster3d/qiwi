@@ -35,7 +35,7 @@ class Mapper
     protected static function getValue(array $data, string $name, string $type)
     {
         $result = null;
-        $value = $data[$name];
+        $value  = $data[$name];
 
         switch ($type) {
             case BaseTypeEnum::INT:
@@ -43,6 +43,12 @@ class Mapper
                 break;
             case BaseTypeEnum::STRING:
                 $result = (string)$value;
+                break;
+            case BaseTypeEnum::BOOL:
+                $result = (bool)$value;
+                break;
+            case BaseTypeEnum::ARRAY:
+                $result = (array)$value;
                 break;
         }
 
