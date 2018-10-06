@@ -17,11 +17,11 @@ final class IdentificationInfoMapper extends Mapper
     public static function make(IdentificationInfo &$identificationInfo, array $identificationInfoResponse) : callable
     {
         $mapper = function () use($identificationInfo, $identificationInfoResponse) {
-            if (self::isValid($identificationInfoResponse, 'defaultPayCurrency')) {
+            if (self::isValid($identificationInfoResponse, 'bankAlias')) {
                 $identificationInfo->setBankAlias(self::getValue($identificationInfoResponse, 'bankAlias', BaseTypeEnum::STRING));
             }
 
-            if (self::isValid($identificationInfoResponse, 'defaultPaySource')) {
+            if (self::isValid($identificationInfoResponse, 'identificationLevel')) {
                 $identificationLevel         = null;
                 $identificationLevelResponse = self::getValue($identificationInfoResponse, 'identificationLevel', BaseTypeEnum::STRING);
 
