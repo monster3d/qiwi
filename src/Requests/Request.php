@@ -56,4 +56,13 @@ class Request
     {
         $this->params = $params;
     }
+
+    /**
+     * Get request method
+     * @return string
+     */
+    public function getMethod() : string
+    {
+        return $this->method;
+    }
 }

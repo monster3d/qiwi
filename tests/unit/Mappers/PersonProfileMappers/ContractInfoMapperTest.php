@@ -49,6 +49,7 @@ class ContractInfoMapperTest extends TestCase
 
     /**
      * @group unit
+     * @covers ContractInfoMapper::make
      */
     public function testMake_ContactInfo_returnVoid()
     {
