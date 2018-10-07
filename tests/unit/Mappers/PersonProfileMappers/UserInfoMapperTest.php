@@ -50,6 +50,7 @@ class UserInfoMapperTest extends TestCase
 
     /**
      * @group unit
+     * @covers UserInfoMapper::make
      */
     public function testMake_UserInfo_returnVoid()
     {

@@ -48,6 +48,7 @@ class IdentificationInfoMapperTest extends TestCase
 
     /**
      * @group unit
+     * @covers IdentificationInfoMapper::make
      */
     public function testMake_IdentificationInfo_returnVoid()
     {
