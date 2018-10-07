@@ -19,4 +19,4 @@ That run project use `run sh file`
 ...
 ## State
 Current on development state   
-Progress (10%)
+Progress (14%)
