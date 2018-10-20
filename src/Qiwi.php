@@ -67,6 +67,11 @@ final class Qiwi
         return new Driver($this->buildSettings());
     }
 
+    public function get()
+    {
+        print_r('OK');
+    }
+
 
 
 

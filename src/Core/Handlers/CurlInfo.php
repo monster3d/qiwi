@@ -7,7 +7,7 @@ namespace Qiwi\Core\Handlers;
  * Interface CurlError
  * @package Qiwi\Core\Handlers
  */
-interface CurlError
+interface CurlInfo
 {
     /**
      * @return array|null

@@ -2,7 +2,7 @@
 
 namespace Qiwi\Core;
 
-use Qiwi\Core\Handlers\CurlError;
+use Qiwi\Core\Handlers\CurlInfo;
 use Qiwi\Exceptions\InitException;
 use Qiwi\Exceptions\RequestException;
 use Qiwi\Requests\InterfaceMethods\Post;
@@ -13,7 +13,7 @@ use Qiwi\Responses\Response;
  * Class Driver
  * @package Qiwi\Core
  */
-class Driver implements CurlError
+class Driver implements CurlInfo
 {
 
     /**
