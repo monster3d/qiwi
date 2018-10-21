@@ -1,4 +1,5 @@
 # Qiwi Facade
+[![Build Status](https://travis-ci.org/monster3d/qiwi.svg?branch=master)](https://travis-ci.org/monster3d/qiwi)
 ## Description
 Give access to Qiwi api in the form of methods   
 ## Contribution
