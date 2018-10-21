@@ -37,6 +37,12 @@ class ContractInfo extends Base
     private $features = [];
 
     /**
+     * @var IdentificationInfo
+     * @see IdentificationInfo
+     */
+    private $identificationInfo;
+
+    /**
      * @param bool $blocked
      * @return ContractInfo
      */
@@ -110,5 +116,24 @@ class ContractInfo extends Base
     public function getFeatures() : array
     {
         return $this->features;
+    }
+
+    /**
+     * @param IdentificationInfo $identificationInfo
+     * @return ContractInfo
+     */
+    public function setIdentificationInfo(IdentificationInfo &$identificationInfo) : self
+    {
+        $this->identificationInfo = $identificationInfo;
+
+        return $this;
+    }
+
+    /**
+     * @return null|IdentificationInfo
+     */
+    public function getIdentificationInfo() : ?IdentificationInfo
+    {
+        return $this->identificationInfo;
     }
 }

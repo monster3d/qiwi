@@ -55,5 +55,4 @@ final class UserInfoMapper extends Mapper
 
         return $mapper;
     }
-
 }

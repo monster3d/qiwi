@@ -66,12 +66,6 @@ class AuthInfo extends Base
     private $contractInfo;
 
     /**
-     * @see IdentificationInfo
-     * @var IdentificationInfo
-     */
-    private $identificationInfo;
-
-    /**
      * @see UserInfo
      * @var UserInfo
      */
@@ -246,25 +240,6 @@ class AuthInfo extends Base
     public function &getContractInfo() : ?ContractInfo
     {
         return $this->contractInfo;
-    }
-
-    /**
-     * @param IdentificationInfo $identificationInfo
-     * @return AuthInfo
-     */
-    public function setIdentificationInfo(IdentificationInfo &$identificationInfo) : self
-    {
-        $this->identificationInfo = $identificationInfo;
-
-        return $this;
-    }
-
-    /**
-     * @return null|IdentificationInfo
-     */
-    public function &getIdentificationInfo() : ?IdentificationInfo
-    {
-        return $this->identificationInfo;
     }
 
     /**

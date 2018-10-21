@@ -2,14 +2,12 @@
 
 namespace Qiwi\Responses;
 
-
+/**
+ * Class Response
+ * @package Qiwi\Responses
+ */
 class Response
 {
-    /**
-     * HTTP status code
-     * @var int
-     */
-    private $statusCode;
 
     /**
      * Body data
@@ -35,24 +33,4 @@ class Response
     {
         return $this->data;
     }
-
-    /**
-     * @param int $code
-     * @return Response
-     */
-    public function setHttpStatusCode(int $code) : self
-    {
-        $this->statusCode = $code;
-
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getHttpStatusCode() : int
-    {
-        return $this->statusCode;
-    }
-
 }

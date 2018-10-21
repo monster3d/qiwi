@@ -122,7 +122,6 @@ class Driver implements CurlInfo
         }
 
         $this->receiveCurlInfo();
-        $response->setHttpStatusCode($this->curlInfo['http_code']);
         $response->setData($result);
     }
 
